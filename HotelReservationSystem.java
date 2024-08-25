@@ -1,7 +1,5 @@
 package HotelReservationPackage;
-
 import java.util.Scanner;
-
 class Room {
     private String roomType;
     private double pricePerNight;
@@ -82,20 +80,20 @@ public class HotelReservationSystem {
             String guestName = sc.nextLine();
             System.out.print("Enter number of nights: ");
             int numberOfNights = sc.nextInt();
-            sc.nextLine();  // Consume the newline character left by nextInt()
+            sc.nextLine(); 
 
             System.out.println("Select room type:");
             System.out.println("1. Single Room\n2. Suite Room");
             int roomChoice = sc.nextInt();
-            sc.nextLine();  // Consume the newline character
+            sc.nextLine();  
 
             Room room = null;
             switch (roomChoice) {
                 case 1:
-                    room = new SingleRoom(100.00); // Example price per night
+                    room = new SingleRoom(100.00); 
                     break;
                 case 2:
-                    room = new SuiteRoom(200.00); // Example price per night
+                    room = new SuiteRoom(200.00);
                     break;
                 default:
                     System.out.println("Invalid room type selected.");
@@ -108,7 +106,7 @@ public class HotelReservationSystem {
             System.out.println("--------");
             System.out.println("1. Make another reservation\n2. Exit");
             int choice = sc.nextInt();
-            sc.nextLine();  // Consume the newline character
+            sc.nextLine();  
 
             if (choice == 2) {
                 sc.close();
